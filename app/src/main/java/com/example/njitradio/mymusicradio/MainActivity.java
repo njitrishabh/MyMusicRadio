@@ -70,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
                 if (mMediaPlayer.isPlaying()) {
                     mMediaPlayer.stop();
                     mMediaPlayer.reset();
+                    mMediaPlayer.setLooping(true);
                 }
 
                 try {
