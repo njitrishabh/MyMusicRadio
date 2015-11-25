@@ -1,14 +1,17 @@
 package com.example.njitradio.mymusicradio;
 
+import android.content.Intent;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Html;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -35,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
     private ImageView mSelectedTrackImage;
     private MediaPlayer mMediaPlayer;
     private ImageView mPlayerControl;
+    private ImageButton btnShare;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
         mSelectedTrackTitle = (TextView)findViewById(R.id.selected_track_title);
         mSelectedTrackImage = (ImageView)findViewById(R.id.selected_track_image);
         mPlayerControl = (ImageView)findViewById(R.id.player_control);
+        btnShare = (ImageButton)findViewById(R.id.btnShare);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -82,6 +87,17 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btnShare.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent sharingIntent = new Intent(Intent.ACTION_SEND);
+                sharingIntent.setType("text/html");
+                sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, Html.fromHtml("<p>This is the text that will be shared.</p>"));
+                startActivity(Intent.createChooser(sharingIntent,"Share using"));
+            }
+        });
+
+
                 SCServices scService = SoundCloud.getService();
                 scService.getRecentTracks(new SimpleDateFormat("yyyy-MM-dd hh:mm:ss").format(new Date()), new Callback<List<Track>>() {
                     @Override
@@ -94,7 +110,11 @@ public class MainActivity extends AppCompatActivity {
                         Log.d(TAG, "Error: " + error);
                     }
                 });
+
+
             }
+
+
 
 
             private void loadTracks(List<Track> tracks) {
