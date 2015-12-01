@@ -137,7 +137,7 @@ static final int REQUEST_CODE_RECOVER_FROM_PLAY_SERVICES_ERROR = 1001;
 
         } else if (mEmail!=null) {
 
-            startActivity(new Intent(this, MainActivity.class));
+            startActivity(new Intent(this, LandingPage.class));
         }
         else {
 
@@ -214,12 +214,7 @@ static final int REQUEST_CODE_RECOVER_FROM_PLAY_SERVICES_ERROR = 1001;
                                            @NonNull String permissions[],
                                            @NonNull int[] grantResults) {
 
-        if (requestCode == RC_PERM_GET_ACCOUNTS) {
 
-            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-
-            }
-        }
     }
 
     @Override

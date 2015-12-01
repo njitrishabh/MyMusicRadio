@@ -14,11 +14,12 @@
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
+
                 <category android:name="android.intent.category.DEFAULT" />
+
                 <data android:mimeType="image/*" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".Login"
             android:label="@string/title_activity_login" >
@@ -27,6 +28,18 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".LandingPage"
+            android:label="@string/title_activity_landing_page" >
+        </activity>
+        <activity
+            android:name=".Search"
+            android:label="@string/title_activity_search" >
+        </activity>
+        <activity
+            android:name=".CreateRadio"
+            android:label="@string/title_activity_create_radio" >
         </activity>
     </application>
 

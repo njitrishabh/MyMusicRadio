@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginBottom="5sp"
+    android:layout_marginLeft="2sp"
+    android:layout_marginRight="5sp"
+    android:layout_marginTop="0sp"     >
+    <LinearLayout
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        <ImageButton
+
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:id="@+id/button_topleft_Music"
+            android:layout_marginBottom="5sp"
+            android:layout_marginLeft="2sp"
+            android:layout_marginRight="5sp"
+            android:layout_marginTop="0sp"
+            android:src="@drawable/musiclogo1"
+            android:onClick="BtnMusic_OnClick"
+            />
+        <ImageButton
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:id="@+id/button_topright_Search"
+            android:layout_marginBottom="5sp"
+            android:layout_marginLeft="2sp"
+            android:layout_marginRight="5sp"
+            android:layout_marginTop="0sp"
+            android:src="@drawable/searchlogo1"
+            android:onClick="BtnSearch_OnClick"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:id="@+id/button_bottomleft_Buy"
+            android:layout_marginBottom="5sp"
+            android:layout_marginLeft="2sp"
+            android:layout_marginRight="5sp"
+            android:layout_marginTop="0sp"
+            android:src="@drawable/buylogo1"
+            android:onClick="BtnBuy_OnClick"
+            />
+        <ImageButton
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:id="@+id/button_bottomright_Add"
+            android:layout_marginBottom="5sp"
+            android:layout_marginLeft="2sp"
+            android:layout_marginRight="5sp"
+            android:layout_marginTop="0sp"
+            android:src="@drawable/addlogo1"
+            android:onClick="BtnAdd_OnClick"
+            />
+    </LinearLayout>
+
+</LinearLayout>

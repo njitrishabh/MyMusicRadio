@@ -5,11 +5,66 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+
+
+
     <ListView
         android:id="@+id/track_list_view"
         android:layout_weight="100"
         android:layout_width="match_parent"
         android:layout_height="0dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tired of song"
+            android:id="@+id/Tired"
+            android:onClick="ontiredClick" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Likebutton"
+            android:layout_gravity="center_horizontal"
+            android:clickable="true"
+            android:src="@drawable/thumbs1"
+            android:contentDescription="thumbsup" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/DisLikebutton"
+            android:layout_gravity="right"
+            android:src="@drawable/thumbdow"
+            android:contentDescription="thumbsdown"
+            android:cropToPadding="false" />
+
+
+        <ImageButton
+            android:id="@+id/btnShare"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/share1"
+            />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_stop"
+            android:src="@drawable/button_stop"
+            android:layout_marginRight="42dp"
+            android:layout_marginEnd="42dp"
+            android:layout_gravity="right" />
+
+
+
+
+    </LinearLayout>
 
     <android.support.v7.widget.Toolbar
         android:background="#333333"
@@ -32,13 +87,9 @@
             android:id="@+id/player_control"
             android:layout_gravity="right"
             android:layout_width="@dimen/image_size"
-            android:layout_height="@dimen/image_size"/>
+            android:layout_height="@dimen/image_size"
+            android:background="#153ab8ff" />
 
-        <ImageButton
-            android:id="@+id/btnShare"
-            android:layout_width="48dp"
-            android:layout_height="48dp">
-        </ImageButton>
 
     </android.support.v7.widget.Toolbar>
 
