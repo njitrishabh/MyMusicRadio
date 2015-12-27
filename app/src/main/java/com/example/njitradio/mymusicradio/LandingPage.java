@@ -15,7 +15,7 @@ public class LandingPage extends AppCompatActivity {
     private ImageButton BtnAdd;
     private ImageButton BtnBuy;
     private ImageButton BtnMusic;
-
+//
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
