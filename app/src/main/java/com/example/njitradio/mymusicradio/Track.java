@@ -2,9 +2,7 @@ package com.example.njitradio.mymusicradio;
 
 import com.google.gson.annotations.SerializedName;
 
-/**
- * Created by Shail on 10/20/2015.
- */
+
 public class Track {
 
     @SerializedName("title")
